@@ -1,0 +1,150 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    width: 200px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: #1591DC;
+    align-items: center;
+    font-size: 30px;
+    color: azure;
+}
+nav ul{
+    color:azure;
+}
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+li{
+    padding: 10px 0;
+}
+li:hover{
+    background-color: blueviolet;
+    border-radius: 15px;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    background-color: #C4E2F5;
+}
+.contenedor{
+    display: flex;
+    flex-direction: row;
+}
+main{
+    flex:1;
+    padding: 20px;
+}
+.renglon{
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+    border: #443199 5px dotted;
+}
+article{
+    width: 300px;
+    height: 200px;
+    border-radius: 15px;
+}
+img{
+    width: 100%;
+    height: 100%;
+}
+.imagen{
+    background-image: url('../img/R.jpg') ;
+   background-size: cover;
+
+}
+.gradienteArriba{
+    background-image: linear-gradient(to top, blue, purple);
+}
+.gradienteAbajo{
+background-image: linear-gradient(to bottom, green, yellow);
+}
+.gradienteIzquierda{
+    background-image: linear-gradient(to left, red, pink);
+}
+.gradienteDerecha{
+    background-image: linear-gradient(to right, orange, turquoise);
+}
+.iconitos{
+    padding: 20px;
+    background-color: blueviolet;
+    
+}
+.iconitos span{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 5px;
+}
+.imgChicas{
+    width: 50px;
+    height: 50px;
+}
+.iconitos p{
+    margin: 20px;
+}
+.textoimagen{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    background-color: cadetblue;
+    
+}
+.imagenChica{
+    width: 100px;
+    height: 100px;
+}
+.renglonFinal{
+display: flex;
+justify-content: center;
+gap: 20px;
+border: #443199 5px dotted;
+}
+.iconos-footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    background-color: #4BB8FA;
+    width: 200px;
+    height: 100px;
+}
+.opciones-footer{
+    flex-direction: row;
+    display: flex;
+    gap: 800px;
+    list-style: none;
+    margin: 0;
+    background-color: #2C5EAD;
+    width: 1313px;
+    height: 100px;
+    align-items: center;
+    font-size: 20px;
+    cursor: pointer;
+}
+.opciones-footer ul{
+display: flex;
+gap: 50px;
+}
+.opciones-footer ul a{
+    text-decoration: none;
+    color: azure;
+}
+.opciones-footer a{
+    text-decoration: none;
+    color: azure;
+}
+footer{
+    display: flex;
+}
