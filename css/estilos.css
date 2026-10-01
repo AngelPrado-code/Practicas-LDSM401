@@ -1,0 +1,31 @@
+
+header{
+padding: 30px;
+text-align: center;
+background-color: #15D8B3;
+color: azure;
+}
+section{
+    padding: 30px;
+    margin-bottom: 20px;
+    text-align: left;
+    background-color: #49A4BB ;
+}
+article{
+    background-color: #C8DFDB;
+    padding: 20px;
+    border-radius: 20px;
+    
+}
+body{
+    background-color: #2E6FA0;
+}
+footer{
+    padding: 30px;
+    text-align: center;
+    background-color: #2F39A9;
+    color: azure;
+}
+.unidadDos :hover{
+    background-color: #1DCED8;
+}
