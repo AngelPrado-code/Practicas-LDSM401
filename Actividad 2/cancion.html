@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disco</title>
+    <link href="css/estilos.css" rel="stylesheet"/>
+</head>
+<body>
+
+    <section class="contenedor">
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="Disco.html">Disco</a></li>
+                <li><a href="cantante.html">Cantante</a></li>
+                <li><a href="cancion.html">Canción</a></li>
+                <li><a href="playlist.html">Playlist</a></li>
+            </ul>
+        </nav>
+        <main>
+        <form name="frmDisco" action="#" method="post" enctype="multipart/form-data" class="formC">
+        <section class="datos">
+            <div class="campos">
+                <div class="campoC">
+                    <label>Nombre</label>
+                    <input type="text" id="nombre"/>
+                </div>
+                <div class="campoC">
+                    <label>Duracion</label>
+                    <input type="text" id="duracion" placeholder="3:00"/>
+                </div>
+                <div class="campoC">
+                    <label>Compositor</label>
+                    <input type="text" id="compositor"/>
+                </div>
+                <div class="campoC">
+                    <label>Precio</label>
+                    <input type="number" id="precio"/>
+                </div>
+             <div class="campoC">
+                    <label>Cantante</label>
+                    <select id="artista">
+                        <option value="Bad Bunny">Bad Bunny</option>
+                        <option value="Frank Ocean">Frank Ocean</option>
+                        <option value="Kendrick Lama">Kendrick Lamar</option>
+                        <option value="Ivan Cornejo">Ivan Cornejo</option>
+                    </select>
+                    </div>
+                </div>
+        </section>
+        <section class="boton">
+            <button type="button" id="boton" onclick="cancion();s">Guardar</button>
+        </section>
+    </form>
+</main>
+    </section>
+    
+    <footer>
+        <section class="Yo">
+            <h3>LDSM401</h3>
+            <ul>
+                <li>Angel Ulises Prado de Anda</li>
+            </ul>
+        </section>
+    </footer>
+    <script src="js/funcionalidad.js"></script>
+</body>
+</html>
