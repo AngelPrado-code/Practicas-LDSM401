@@ -86,7 +86,6 @@ var letraE = function(){
         cadena += '<br>';
     }
     document.getElementById("impMatriz").innerHTML = cadena;
-   
 }
 
     letraE();
