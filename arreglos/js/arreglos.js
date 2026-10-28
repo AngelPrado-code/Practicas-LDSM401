@@ -85,8 +85,8 @@ var letraE = function(){
         }
         cadena += '<br>';
     }
-    let impMatriz = document.getElementById("impMatriz");
-    if (impMatriz) impMatriz.innerHTML = cadena;
+    document.getElementById("impMatriz").innerHTML = cadena;
+   
 }
 
     letraE();
