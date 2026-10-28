@@ -1,4 +1,3 @@
-
 function muertes() {
     let muertesA = new Array(7);
     let suma = 0; 
@@ -13,7 +12,9 @@ function muertes() {
     for (let indice in muertesA) {
         cadena += '<div style="background-color: green; color: white; width: 100%; text-align: center; border: #97d7ff 5px solid;"> Dia: ' + indice + '= Muerte: ' + muertesA[indice] + '</div>';
     }
-    document.getElementById("impMuertes").innerHTML = cadena; 
+    let impMuertes = document.getElementById("impMuertes");
+    if (impMuertes) impMuertes.innerHTML = cadena; 
+    
     let promedio = suma/7;
     let min = Math.min(...muertesA);
     let max = Math.max(...muertesA);
@@ -21,10 +22,10 @@ function muertes() {
     alert("El promedio es: " + promedio + "\n" + "El valor minimo es: " + min + "\n" + "El valor maximo es: " + max);
 }
 
-   var alumnos = function(){
+var alum = [];
+var alumnos = function(){
     alum = new Array(10);
     let cadena = '';
-   
 
     for(let i = 0; i < 10; i++){
         let a = prompt("Captura un Alumno");
@@ -34,11 +35,12 @@ function muertes() {
     alum.forEach(function (a) {
         cadena += '<div style="background-color: green; color: white; width: 100%; text-align: center; border: #97d7ff 5px solid;">' + a + '</div>';
     });
-    document.getElementById("impAlumnos").innerHTML = cadena;
-   }
+    let impAlumnos = document.getElementById("impAlumnos");
+    if (impAlumnos) impAlumnos.innerHTML = cadena;
+}
 
-   var eliminarA = function(){
-     let cadena2 = '';
+var eliminarA = function(){
+    let cadena2 = '';
     let borrar = prompt("Captura el alumno a eliminar");
     for(let i = 0; i < alum.length; i++){
         if(alum[i] == borrar){
@@ -49,54 +51,61 @@ function muertes() {
     alum.forEach(function (a) {
         cadena2 += '<div style="background-color: green; color: white; width: 100%; text-align: center; border: #97d7ff 5px solid;">' + a + '</div>';
     });
-    document.getElementById("impAlumnosFinal").innerHTML = '<h3>Nuevo:</h3>';
-    document.getElementById("impAlumnosFinal").innerHTML += cadena2;
+    let impAlumnosFinal = document.getElementById("impAlumnosFinal");
+    if (impAlumnosFinal) {
+        impAlumnosFinal.innerHTML = '<h3>Nuevo:</h3>';
+        impAlumnosFinal.innerHTML += cadena2;
+    }
 }
 
-var matrizX = function(){
-    let matriz = new Array(5);
+var letraE = function(){
+    let matris = new Array(5);
     for(let i = 0; i < 5; i++){
-        matriz[i] = new Array(4);
+        matris[i] = new Array(4);
     }
 
     for(let i = 0; i < 5; i++){
         for(let j = 0; j < 4; j++){
-            matriz[i][j] = "-";
+            matris[i][j] = "-";
         }
     }
 
     for(let j = 0; j < 4; j++){
-        matriz[0][j] = "X";
-        matriz[2][j] = "X";
-        matriz[4][j] = "X";
+        matris[0][j] = "X";
+        matris[2][j] = "X";
+        matris[4][j] = "X";
     }
-    matriz[1][0] = "X";
-    matriz[3][0] = "X";
+    matris[1][0] = "X";
+    matris[3][0] = "X";
 
     let cadena = '';
     for(let i = 0; i < 5; i++){
         for(let j = 0; j < 4; j++){
-            cadena += matriz[i][j] + ' ';
+            cadena += matris[i][j] + ' ';
         }
         cadena += '<br>';
     }
-    document.getElementById("impMatriz").innerHTML = cadena;
+    let impMatriz = document.getElementById("impMatriz");
+    if (impMatriz) impMatriz.innerHTML = cadena;
 }
-matrizX();
+
+    letraE();
+
 
 function calcular(){
     let tabla = [
-    [120, 180, 280],
-    [120, 280, 340],
-    [240, 520, 890]
-];
+        [120, 180, 280],
+        [120, 280, 340],
+        [240, 520, 890]
+    ];
 
     let fila = parseInt(document.getElementById("puesto").value);
     let columna = parseInt(document.getElementById("nivel").value);
     let horas = parseFloat(document.getElementById("horas").value);
 
     let total = tabla[fila][columna] * horas;
-    document.getElementById("impTotal").innerHTML = "$"+total;
+    let impTotal = document.getElementById("impTotal");
+    if (impTotal) impTotal.innerHTML = "$"+total;
 }
 
 let diasA = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"];
@@ -125,7 +134,9 @@ function guardar(){
         cadena += '</tr>';
     }
     cadena += '</table>';
-    document.getElementById("impAgenda").innerHTML = cadena;
+    let impAgenda = document.getElementById("impAgenda");
+    if (impAgenda) impAgenda.innerHTML = cadena;
 }
 
-guardar();
+
+    guardar();

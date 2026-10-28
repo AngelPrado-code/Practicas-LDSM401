@@ -8,12 +8,14 @@
     margin-top: 15px;
 }
 body {
-    background-color: #B8CFB3;
+   background-image: linear-gradient(to left, #84A282, #97D7FF);
+
 }
 
 .card {
     height: 100%;
     border-radius: 10px;
+    background-color: #F5EFE3;
 }
 
 .card-header {
