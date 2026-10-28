@@ -85,11 +85,13 @@ var letraE = function(){
         }
         cadena += '<br>';
     }
-    document.getElementById("impMatriz").innerHTML = cadena;
+    let impMatriz = document.getElementById("impMatriz");
+    if (impMatriz) impMatriz.innerHTML = cadena;
 }
 
+if (document.getElementById("impMatriz")) {
     letraE();
-
+}
 
 function calcular(){
     let tabla = [
@@ -125,17 +127,18 @@ function guardar(){
     let cadena = '<table class="table table-bordered table-sm">';
     cadena += '<tr><th>Día</th><th>Hora</th><th>Evento</th><th>Descripcion</th></tr>';
     for(let i = 0; i < 7; i++){
-        cadena +='<tr>';
-        cadena += '<td>'+ diasA[i] +'</td>';
+        cadena += '<tr>';
+        cadena += '<td>' + diasA[i] + '</td>';
         for(let j = 0; j < 3; j++){
-            cadena +='<td>' + agenda[i][j] + '</td>';
+            cadena += '<td>' + agenda[i][j] + '</td>';
         }
-        cadena +='</tr>';
+        cadena += '</tr>';
     }
-    cadena +='</table>';
-    document.getElementById("impAgenda").innerHTML = cadena;
-   
+    cadena += '</table>';
+    let impAgenda = document.getElementById("impAgenda");
+    if (impAgenda) impAgenda.innerHTML = cadena;
 }
 
-
+if (document.getElementById("impAgenda")) {
     guardar();
+}
