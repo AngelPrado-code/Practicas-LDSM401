@@ -126,16 +126,16 @@ function guardar(){
     let cadena = '<table class="table table-bordered table-sm">';
     cadena += '<tr><th>Día</th><th>Hora</th><th>Evento</th><th>Descripcion</th></tr>';
     for(let i = 0; i < 7; i++){
-        cadena += '<tr>';
-        cadena += '<td>' + diasA[i] + '</td>';
+        cadena +='<tr>';
+        cadena += '<td>'+ diasA[i] +'</td>';
         for(let j = 0; j < 3; j++){
-            cadena += '<td>' + agenda[i][j] + '</td>';
+            cadena +='<td>' + agenda[i][j] + '</td>';
         }
-        cadena += '</tr>';
+        cadena +='</tr>';
     }
-    cadena += '</table>';
-    let impAgenda = document.getElementById("impAgenda");
-    if (impAgenda) impAgenda.innerHTML = cadena;
+    cadena +='</table>';
+    document.getElementById("impAgenda").innerHTML = cadena;
+   
 }
 
 
