@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Futbol</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+<main>
+    <h2>Nuevo Pedido</h2>
+    <form id="formPedido">
+        <label for="rfc">RFC:</label>
+        <input type="text" id="rfc" placeholder="Ej. 12345678" required>
+        <label for="cliente">Cliente:</label>
+        <input type="text" id="cliente" placeholder="Ej. Anahí" required>
+        <label for="ninos">Niños:</label>
+        <input type="number" id="ninos" placeholder=0 required>
+        <label for="adultos">Adultos:</label>
+        <input type="number" id="adultos" placeholder=0 required>
+        <label for="zona">Selecciona una zona:</label>
+        <article class="grupo-inline">
+            <select id="zona">
+                <option value="sol">Zona sol</option>
+                <option value="sombra">Zona sombra</option>
+            </select>
+            <button type="button" class="btn-secundario" onclick="agregarPedido();">+ Añadir</button>
+        </article>
+    <hr>
+    <h3>Pedidos agregados:</h3>
+    <h4>Zona Sol</h4>
+    <p>Adulto: <strong id="precioAdulto">$350.00</strong></p>
+    <p>Niño: <strong id="precioNino">$280.00</strong></p>
+
+    <h4>Zona Sombra</h4>
+    <p>Adulto: <strong id="precioAdulto">$550.00</strong></p>
+    <p>Niño: <strong id="precioNino">$380.00</strong></p>
+    <ul id="listaPedidos"></ul>
+    <button type="button" class="btn-primario" onclick="procesarEnviar();">Calcular y Generar Ticket</button>
+    </form>
+</main>
+<script src="js/futbool.js"></script>
+</body>
+</html>
